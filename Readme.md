@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Натали Уста](https://up.htmlacademy.ru/htmlcss/32/user/1807715).
-* Наставник: Артур Трифонов.
+* Наставник: [Артур Трифонов](https://htmlacademy.ru/profile/wrgraff).
 
 ---
 
