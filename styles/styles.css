@@ -14,7 +14,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -53,7 +61,22 @@ ol {
 
 /* Header */
 
-/* place for logo */
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  width: 310px;
+  margin: 0;
+  padding: 0;
+}
 
 .navigation-link {
   font-size: 20px;
@@ -64,7 +87,26 @@ ol {
   text-decoration: none;
 }
 
+.navigation-user {
+  width: 250px;
+  margin-left: auto;
+}
+
 /* Main */
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.welcome-logo {
+  display: block;
+  margin: 0 auto;
+}
 
  .welcome {
   background-image: url("../img/index-background.jpg");
@@ -93,9 +135,21 @@ ol {
   background-color: #83B3D31F;
 }
 
+.advantages-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.advantages-item {
+  width: 400px;
+}
+
 .advantages-item:first-child,
 .advantages-item:nth-child(2) {
-  color: white;
+  color: #FFFFFF;
   background-color: #83B3D3;
 }
 
@@ -113,8 +167,19 @@ ol {
 /* Tips */
 
 .tips-list {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
   color: #000000;
   background-color: #83B3D31F;
+}
+
+.tips-item {
+  width: 400px;
+  text-align: center;
 }
 
 .tips-item:nth-child(2) {
@@ -166,6 +231,7 @@ ol {
 /* index-newsletter */
 
 .index-newsletter {
+  width: 1200px;
   text-align: center;
   color: #FFFFFF;
   background-image: url("../img/newsletter-background.jpg");
@@ -193,7 +259,23 @@ ol {
 
 /* Page-footer */
 
+.page-footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 110px;
+}
+
 .phone {
+  width: 720px;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
