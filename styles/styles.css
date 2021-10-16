@@ -27,11 +27,24 @@ body {
   flex-direction: column;
   min-height: 100%;
   margin: 0;
+  padding-left: 40px;
+  padding-right: 40px;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #000000;
   background-color: #FFFFFF;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 a {
@@ -65,6 +78,7 @@ ol {
 
 /* Header */
 
+
 .logo {
   display: block;
   width: 138px;
@@ -80,8 +94,8 @@ ol {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 2;
-  width: 531px;
+  flex-grow: 1;
+  width: 431px;
   margin: 0;
   padding: 0;
 }
@@ -99,9 +113,14 @@ ol {
 
 .navigation-user {
   display: flex;
-  flex-grow: 2;
-  width: 531px;
-  margin-left: auto;
+  flex-grow: 1;
+  width: 431px;
+  margin-left: 209px;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
 }
 
 /* Main */
@@ -114,6 +133,8 @@ ol {
 
 .welcome-logo {
   display: block;
+  padding-top: 51px;
+  padding-bottom: 82px;
   margin: 0 auto;
 }
 
@@ -129,6 +150,8 @@ ol {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 63px;
+  margin-bottom: 23px;
 }
 
 .text-heading {
@@ -136,6 +159,7 @@ ol {
   line-height: 36px;
   text-align: center;
   color: #333333;
+  margin-bottom: 79px;
 }
 
 /* Advantages */
@@ -170,9 +194,15 @@ ol {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+  margin-top: 98px;
+  margin-bottom: 28px;
   text-transform: uppercase;
 }
 
+.advantages-text {
+  margin-top: 26px;
+  margin-bottom: 79px;
+}
 /* Tips */
 
 .tips-list {
@@ -204,6 +234,7 @@ ol {
 
 .tips-text {
   color: #333333;
+  margin-bottom: 79px;
 }
 
 /* Search */
@@ -213,6 +244,7 @@ ol {
 }
 
 .search-heading {
+  margin-top: 91px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -220,6 +252,7 @@ ol {
 }
 
 .search-description {
+  margin-bottom: 73px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -227,6 +260,12 @@ ol {
 }
 
 .search-button {
+  display: block;
+  width: 575px;
+  margin: 0 auto;
+  margin-bottom: 91px;
+  padding-top: 13px;
+  padding-bottom: 17px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -241,6 +280,8 @@ ol {
 
 .index-newsletter {
   width: 1200px;
+  padding-top: 94px;
+  padding-bottom: 93px;
   text-align: center;
   color: #FFFFFF;
   background-image: url("../img/newsletter-background.jpg");
@@ -249,6 +290,7 @@ ol {
 }
 
 .newsletter-title {
+  margin-bottom: 15px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -256,6 +298,7 @@ ol {
 }
 
 .newsletter-logo {
+  margin-bottom: 26px;
   font-size: 22px;
   line-height: 26px;
   font-weight: 400;
@@ -274,11 +317,28 @@ ol {
   align-items: center;
   width: 1200px;
   margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-social-item {
+  width: 20px;
+  height: 18px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-social-item:first-child {
+  margin-left: 0;
 }
 
 .phone {
@@ -299,6 +359,7 @@ ol {
 }
 
 .header-title {
+  padding-top: 35px;
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
@@ -313,6 +374,7 @@ ol {
 }
 
 .breadcrumbs-link {
+  margin-right: 26px;
   font-size: 16px;
   line-height: 21px;
   color: inherit;
@@ -340,6 +402,7 @@ ol {
 /* Sorting */
 
 .sorting-title {
+  margin-top: 50px;
   font-size: 30px;
   line-height: 39px;
   font-weight: 700;
@@ -353,6 +416,15 @@ ol {
 
 .sorting-hotels {
   display: flex;
+  margin-top: 44px;
+  margin-left: auto;
+}
+
+.sorting-item {
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  padding: 17px;
 }
 
 /* Hotels-catalog */
@@ -360,6 +432,8 @@ ol {
 .hotels-katalog {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 .hotels-card {
@@ -403,7 +477,17 @@ ol {
 
 /* Pagination */
 
+.pagination {
+  display: flex;
+  margin-top: 31px;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  padding: 15px 15px;
   font-size: 20px;
   line-height: 25px;
   font-weight: 700;
@@ -411,6 +495,11 @@ ol {
   color: #FFFFFF;
   background-color: #83B3D3;
   text-decoration: none;
+  border-radius: 4px;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 7px;
 }
 
 .pagination-current {
@@ -422,6 +511,12 @@ ol {
   display: block;
   margin: 0 auto;
   width: 625px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 4px;
+}
+.quantity {
+  margin-left: auto;
 }
 
 /* Newsletter */
