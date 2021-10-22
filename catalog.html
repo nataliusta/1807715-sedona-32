@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -32,22 +33,22 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item-icon">
+            <a class="navigation-link-icon" href="#">
               <span class="visually-hidden">
                 Поиск
               </span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item-icon">
+            <a class="navigation-link-icon" href="#">
               <span class="visually-hidden">
                 Избранное
               </span>
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">
+            <a class="navigation-button button" href="#">
               Хочу сюда!
             </a>
           </li>
@@ -152,17 +153,17 @@
           </form>
           <ul class="sorting-hotels">
             <li class="sorting-item">
-              <a href="#" class="hotels-cards">
+              <a href="#" class="sorting-item-link">
                 <span class="visually-hidden">Показать карточки</span>
               </a>
             </li>
             <li class="sorting-item">
-              <a href="#" class="hotels-slides">
+              <a href="#" class="sorting-item-link">
                 <span class="visually-hidden">Показать слайды</span>
               </a>
             </li>
             <li class="sorting-item">
-              <a href="#" class="hotels-list">
+              <a href="#" class="sorting-item-link">
                 <span class="visually-hidden">Показать список</span>
               </a>
             </li>
@@ -249,7 +250,6 @@
             <a class="pagination-link" href="#">10</a>
           </li>
         </ol>
-        <div class="quantity">
         <label for="quantity">Гостиниц на странице:</label>
         <select class="select-control" id="quantity" name="sorting">
           <option value="quantity">4</option>
@@ -257,7 +257,6 @@
           <option value="quantity">6</option>
           <option value="quantity">7</option>
         </select>
-        </div>
       </section>
 
       <section class="newsletter">
