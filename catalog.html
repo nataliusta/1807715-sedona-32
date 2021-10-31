@@ -150,7 +150,7 @@
       <div class="sorting-type-container">
         <h2 class="sorting-title">Найдено гостиниц: 38</h2>
         <label class="visually-hidden" for="sorting">Сортировка</label>
-        <select class="select-control" id="sorting" name="sorting">
+        <select class="sorting-select-control" id="sorting" name="sorting">
           <option value="cheap">Сначала дешёвые</option>
           <option value="popular">Сначала популярные</option>
           <option value="expensive">Сначала дорогие</option>
@@ -180,9 +180,11 @@
         <h2 class="visually-hidden">Каталог отелей</h2>
         <ul class="hotels-list">
           <li class="hotels-card">
-            <a class="hotels-card-link" href="#">
+            <a href="#">
               <img class="hotels-card-image" src="img/catalog/amara-hotel.jpg" width="180" height="120"
                 alt="Amara Resort & Spa">
+            </a>
+            <a class="hotels-card-link" href="#">
               <h3 class="hotels-card-title">Amara Resort & Spa</h3>
             </a>
             <p class="hotels-type">Гостиница</p>
@@ -193,9 +195,11 @@
             <span class="rating">Рейтинг: 8,5</span>
           </li>
           <li class="hotels-card">
-            <a class="hotels-card-link" href="#">
+            <a href="#">
               <img class="hotels-card-image" src="img/catalog/desert-hotel.jpg" width="180" height="120"
                 alt="Desert Quail Inn">
+            </a>
+            <a class="hotels-card-link" href="#">
               <h3 class="hotels-card-title">Desert Quail Inn</h3>
             </a>
             <p class="hotels-type">Мотель</p>
@@ -206,9 +210,11 @@
             <span class="rating">Рейтинг: 8,9</span>
           </li>
           <li class="hotels-card">
-            <a class="hotels-card-link" href="#">
+            <a href="#">
               <img class="hotels-card-image" src="img/catalog/villas-hotel.jpg" width="180" height="120"
                 alt="Villas at Poco Diablo">
+            </a>
+            <a class="hotels-card-link" href="#">
               <h3 class="hotels-card-title">Villas at Poco Diablo</h3>
             </a>
             <p class="hotels-type">Апартаменты</p>
@@ -219,9 +225,11 @@
             <span class="rating">Рейтинг: 9,2</span>
           </li>
           <li class="hotels-card">
-            <a class="hotels-card-link" href="#">
+            <a href="#">
               <img class="hotels-card-image" src="img/catalog/green-hotel.jpg" width="180" height="120"
                 alt="GreenTree Inn">
+            </a>
+            <a class="hotels-card-link" href="#">
               <h3 class="hotels-card-title">GreenTree Inn</h3>
             </a>
             <p class="hotels-type">Гостиница</p>
@@ -256,13 +264,15 @@
               <a class="pagination-link" href="#">10</a>
             </li>
           </ol>
-          <label for="quantity">Гостиниц на странице:</label>
-          <select class="select-control" id="quantity" name="sorting">
-            <option value="quantity">4</option>
-            <option value="quantity">5</option>
-            <option value="quantity">6</option>
-            <option value="quantity">7</option>
-          </select>
+          <div class="quantity-container">
+            <label for="quantity">Гостиниц на странице:</label>
+            <select class="quantity-select-control" id="quantity" name="sorting">
+              <option value="quantity">4</option>
+              <option value="quantity">5</option>
+              <option value="quantity">6</option>
+              <option value="quantity">7</option>
+            </select>
+          </div>
         </div>
       </section>
 
@@ -271,7 +281,7 @@
           Подпишитесь на рассылку
         </h2>
         <p class="newsletter-logo">
-          Только полезная информация и никакого спама,честное бойскаутское!
+          Только полезная информация и никакого спама,<br>честное бойскаутское!
         </p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="newsletter-email">
@@ -292,22 +302,22 @@
       <section class="contacts">
         <h2 class="visually-hidden">Мы в соц.сетях</h2>
         <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="social-link" href="#">
+          <li class="footer-social-item twitter-icon">
+            <a class="footer-social-link twitter-icon" href="#">
               <span class="visually-hidden">
                 Твиттер
               </span>
             </a>
           </li>
-          <li class="footer-social-item">
-            <a class="social-link" href="#">
+          <li class="footer-social-item fb-icon">
+            <a class="footer-social-link fb-icon" href="#">
               <span class="visually-hidden">
                 Фейсбук
               </span>
             </a>
           </li>
-          <li class="footer-social-item">
-            <a class="social-link" href="#">
+          <li class="footer-social-item youtube-icon">
+            <a class="footer-social-link youtube-icon" href="#">
               <span class="visually-hidden">
                 Ютуб
               </span>
