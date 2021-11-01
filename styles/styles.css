@@ -413,8 +413,6 @@ ol {
 
 .page-footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 1200px;
   margin: 0 auto;
   padding-top: 40px;
@@ -428,30 +426,38 @@ ol {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
+  min-width: 107px;
   padding: 0;
   margin: 0;
 }
 
 .footer-social-item {
+  flex-grow: 1;
   margin: 0;
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 .footer-social-link {
   display: block;
   width: 18px;
   height: 18px;
-  padding: 16px;
+  padding: 15px;
   box-sizing: border-box;
 }
 
 .phone {
+  margin: 0 auto;
   width: 720px;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   color: #000000;
   text-decoration: none;
+}
+
+.htmlacademy-link {
+  flex-grow: 1;
+  width: 115px;
 }
 
 /* Catalog */
@@ -652,7 +658,8 @@ ol {
 }
 
 .hotels-card-image {
-  width: 180px;
+  grid-row: 1/4;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -674,8 +681,6 @@ ol {
   line-height: 24px;
   font-weight: 400;
   color: #333333;
-  justify-items: center;
-  align-items: center;
 }
 
 .hotels-card-price {
