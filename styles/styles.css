@@ -53,6 +53,7 @@ a {
 
 .button {
   display: inline-block;
+  box-sizing: border-box;
   font-family: inherit;
   font-size: 16px;
   line-height: 21px;
@@ -86,20 +87,22 @@ ol {
   width: 1200px;
 }
 
-.logo {
-  width: 138px;
-  height: 70px;
-  margin: 0 auto;
-}
-
 .navigation {
   position: relative;
   display: flex;
   width: 1200px;
-  min-height: 65px;
   margin: 0 auto;
   padding: 0 72px;
   box-sizing: border-box;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  width: 138px;
+  height: 70px;
+  margin: 0 auto;
+  margin-left: -69px;
 }
 
 .navigation-list {
@@ -114,7 +117,10 @@ ol {
 .navigation-link {
   position: relative;
   display: block;
-  padding: 18px 17px;
+  padding-top: 19px;
+  padding-left: 16px;
+  padding-bottom: 20px;
+  padding-right: 16px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
@@ -130,20 +136,20 @@ ol {
 .navigation-link:focus {
   color: #756257;
   outline: 3px solid #83B3D3;
+  outline-offset: -12px;
   border-radius: 10px;
-  outline-offset: -5px;
 }
 
-.navigation-link:disabled {
+.navigation-link:active {
   color: #756257;
   opacity: 0.3;
 }
 
 .navigation-link-current::after {
   position: absolute;
-  right: 17px;
+  right: 16px;
   bottom: 0;
-  left: 17px;
+  left: 16px;
   height: 2px;
   background-color: #756257;
   content: "";
@@ -187,7 +193,7 @@ ol {
   border-radius: 8px;
 }
 
-.navigation-link-icon:disabled .user-icon {
+.navigation-link-icon:active .user-icon {
   fill: #756257;
   opacity: 0.3;
 }
@@ -201,7 +207,7 @@ ol {
   position: absolute;
   top: 0;
   right: -3px;
-  display: inline-block;
+  display: block;
   box-sizing: border-box;
   padding: 3px;
   width: 19px;
@@ -214,7 +220,7 @@ ol {
   border-radius: 50%;
 }
 
-.counter:disabled {
+.counter:active {
   color: #FFFFFF;
   opacity: 0.3;
 }
@@ -236,7 +242,7 @@ ol {
   outline: 3px solid #83B3D3;
 }
 
-.navigation-button:disabled {
+.navigation-button:active {
   color: #FFFFFF;
   opacity: 0.3;
   background-color: #615048;
@@ -477,7 +483,7 @@ ol {
   outline: 3px solid #83B3D3;
 }
 
-.search-button:disabled {
+.search-button:active {
   color: #FFFFFF;
   opacity: 0.3;
   background-color: #615048;
@@ -520,31 +526,42 @@ ol {
 
 .field {
   width: 100%;
-  padding-top: 22px;
+  padding-top: 23px;
   padding-left: 22px;
-  padding-bottom: 23px;
+  padding-right: 19px;
+  padding-bottom: 22px;
   margin: 0;
-  background: #F2F2F2;
+  background-color: #F2F2F2;
   border: none;
   border-radius: 10px 0 0 10px;
   box-sizing: border-box;
 }
 
-.field:hover {
+.field:hover,
+.field:focus {
   background-color: #E5E5E5;
 }
 
 .field:focus {
-  background-color: #E5E5E5;
   outline: 3px solid #83B3D3;
 }
 
-.field:active {
+.field::placeholder {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
   color: #000000;
+  opacity: 0.6;
+}
+
+input[type="email"]:active {
   background-color: #FFFFFF;
   outline: 2px solid #000000;
 }
 
+input:placeholder-shown {
+  outline: none;
+}
 
 .newsletter-logo {
   margin-bottom: 26px;
@@ -570,7 +587,7 @@ ol {
   outline: 3px solid #756257;
 }
 
-.newsletter-button:disabled {
+.newsletter-button:active {
   color: #FFFFFF;
   opacity: 0.3;
   background-color: #68A2CA;
@@ -612,6 +629,21 @@ ol {
   box-sizing: border-box;
 }
 
+.social-icon:hover .social {
+  fill: #68A2CA;
+}
+
+.footer-social-link:focus {
+  fill: #68A2CA;
+  outline: 3px solid #83B3D3;
+  border-radius: 6px;
+}
+
+.social-icon:active .social {
+  fill: #68A2CA;
+  opacity: 0.3;
+}
+
 .social-icon {
   margin: 0;
   fill: #83B3D3;
@@ -619,23 +651,6 @@ ol {
 
 .social-icon .social {
   fill: #83B3D3;
-}
-
-.social-icon:hover .social {
-  fill: #68A2CA;
-}
-
-.twitter-icon:focus,
-.fb-icon:focus,
-.youtube-icon:focus {
-  fill: #68A2CA;
-  outline: 3px solid #83B3D3;
-  border-radius: 6px;
-}
-
-.social-icon:disabled .social {
-  fill: #68A2CA;
-  opacity: 0.3;
 }
 
 .phone {
@@ -659,7 +674,7 @@ ol {
   border-radius: 6px;
 }
 
-.phone:disabled {
+.phone:active {
   color: #756257;
   opacity: 0.3;
 }
@@ -674,7 +689,7 @@ ol {
   border-radius: 4px;
 }
 
-.htmlacademy-link:disabled .htmlacademy {
+.htmlacademy-link:active .htmlacademy {
   fill: #756257;
   opacity: 0.3;
 }
@@ -742,6 +757,8 @@ ol {
 
 .catalog-filters-group {
   display: grid;
+  grid-template-columns: 287px;
+  justify-items: start;
   padding: 0;
   margin: 0;
   border: none;
@@ -758,6 +775,117 @@ ol {
   line-height: 26px;
   font-weight: 700;
   color: #FFFFFF;
+}
+
+/* Range */
+
+.range-scale {
+  position: relative;
+  width: 287px;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-bar {
+  position: absolute;
+  width: 227px;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.catalog-filters-label {
+  display: flex;
+  align-items: center;
+  width: 144px;
+  padding-top: 14px;
+  padding-left: 17px;
+  padding-bottom: 11px;
+  font: inherit;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+}
+
+.catalog-filter-input {
+  border: none;
+  background-color: transparent;
+}
+
+/* Control */
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 39px;
+  margin-bottom: 13px;
+}
+
+/* Mark */
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.control:hover .control-mark {
+  background-color: #FFFFFF99;
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: absolute;
+  width: 12px;
+  height: 10px;
+  content: url("../img/icons/checkbox.svg");
+}
+
+/* Radio */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
 }
 
 .control-label {
@@ -843,6 +971,8 @@ ol {
   height: 48px;
   padding: 17px 16px;
   box-sizing: border-box;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 /* Hotels-catalog */
@@ -861,8 +991,9 @@ ol {
 }
 
 .hotels-card {
+  position: relative;
   display: grid;
-  grid-template-columns: 180px 151px 1fr 160px;
+  grid-template-columns: 206px 151px 1fr 160px;
   grid-template-rows: 31px 52px 37px;
   column-gap: 8px;
   margin-bottom: 58px;
@@ -871,15 +1002,35 @@ ol {
   box-sizing: border-box;
 }
 
-.hotels-card-link {
-  grid-column: 2/4;
-  text-decoration: none;
+.hotels-card::before {
+  position: absolute;
+  right: 0;
+  top: -29px;
+  left: 0;
+  content: "";
+  height: 1px;
+  background-color: #E5E5E5;
+}
+
+.hotels-card:last-child::after {
+  position: absolute;
+  right: 0;
+  bottom: -35px;
+  left: 0;
+  content: "";
+  height: 1px;
+  background-color: #E5E5E5;
 }
 
 .hotels-card-image-link {
   grid-row: 1/4;
   width: 100%;
   object-fit: cover;
+}
+
+.hotels-card-link {
+  grid-column: 2/4;
+  text-decoration: none;
 }
 
 .hotels-card-title {
@@ -942,25 +1093,33 @@ ol {
 .four-stars-hotel {
   grid-column: 4/5;
   grid-row: 1/2;
-  margin: 0;
+  width: 73px;
+  margin: 0 auto;
+  background: url("../img/icons/star.svg") repeat-x;
 }
 
 .three-stars-hotel {
-  grid-column: 5/6;
+  grid-column: 4/5;
   grid-row: 1/2;
-  margin: 0;
+  width: 54px;
+  margin: 0 auto;
+  background: url("../img/icons/star.svg") repeat-x;
 }
 
 .two-stars-hotel {
-  grid-column: 5/6;
+  grid-column: 4/5;
   grid-row: 1/2;
-  margin: 0;
+  width: 36px;
+  margin: 0 auto;
+  background: url("../img/icons/star.svg") repeat-x;
 }
 
 .stars-hotel-two {
-  grid-column: 5/6;
+  grid-column: 4/5;
   grid-row: 1/2;
-  margin: 0;
+  width: 36px;
+  margin: 0 auto;
+  background: url("../img/icons/star.svg") repeat-x;
 }
 
 .rating {
@@ -984,12 +1143,23 @@ ol {
 /* Pagination */
 
 .pagination-container {
+  position: relative;
   display: flex;
   width: 1056px;
   min-height: 55px;
   margin: 0;
   padding: 0;
   margin-bottom: 89px;
+}
+
+.pagination-container::before {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  left: 0;
+  content: "";
+  height: 1px;
+  background-color: #E5E5E5;
 }
 
 .pagination {
