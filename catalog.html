@@ -78,6 +78,17 @@
           <ul class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
+                <svg aria-hidden="true" focusable="false" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <g clip-path="url(#clip0)">
+                    <path d="M6 0L0 5.5V11.7H12V5.5L6 0ZM11 10.7H1V5.9L6 1.4L11 5.9V10.7Z" fill="white" />
+                    <path d="M4 10H5V7.5H7V10H8V6.5H4V10Z" fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0">
+                      <rect width="12" height="12" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
                 <span class="visually-hidden">Главная</span>
               </a>
             </li>
@@ -97,21 +108,18 @@
                   <li class="catalog-filters-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
-                      <span class="control-mark"></span>
                       <span class="control-label">Бассейн</span>
                     </label>
                   </li>
                   <li class="catalog-filters-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
-                      <span class="control-mark"></span>
                       <span class="control-label">Парковка</span>
                     </label>
                   </li>
                   <li class="catalog-filters-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" name="wi-fi">
-                      <span class="control-mark"></span>
                       <span class="control-label">Wi-Fi</span>
                     </label>
                   </li>
@@ -124,50 +132,46 @@
                     <label class="control">
                       <input class="visually-hidden control-input" type="radio" name="hotel-group" value="hotel"
                         checked>
-                      <span class="control-mark"></span>
                       <span class="control-label">Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filters-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="radio" name="hotel-group" value="motel">
-                      <span class="control-mark"></span>
                       <span class="control-label">Мотель</span>
                     </label>
                   </li>
                   <li class="catalog-filters-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="radio" name="hotel-group" value="apartments">
-                      <span class="control-mark"></span>
                       <span class="control-label">Апартаменты</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="catalog-filters-group">
-
+              <fieldset class="catalog-filters-group price-scale">
                 <legend class="catalog-filters-title">Стоимость, ₽:</legend>
-
                 <div class="range-wrapper-inputs">
-                <label class="catalog-filters-label">от
-                  <input class="catalog-filter-input" placeholder="0" type="number" name="min-price">
-                </label>
-                <label class="catalog-filters-label">до
-                  <input class="catalog-filter-input" placeholder="9000" type="number" name="max-price">
-                </label>
+                  <label class="catalog-filters-label">
+                    <input class="catalog-filter-input" placeholder="0" type="number" name="min-price">
+                    <span>от</span>
+                  </label>
+                  <label class="catalog-filters-label">
+                    <input class="catalog-filter-input" placeholder="9000" type="number" name="max-price">
+                    <span>до</span>
+                  </label>
                 </div>
-                <div class="range">
-                  <div class="range-scale">
-                    <div class="range-bar">
-                      <button class="range-toggle toggle-min" type="button">
-                        <span class="visually-hidden">Изменить минимальную цену.</span>
-                      </button>
-                      <button class="range-toggle toggle-max" type="button">
-                        <span class="visually-hidden">Изменить максимальную цену.</span>
-                      </button>
-                    </div>
+
+                <div class="range-scale">
+                  <div class="range-bar" style="margin-right: 60px; width: 237px">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
                   </div>
-                  </div>
+                </div>
               </fieldset>
               <div class="button-container">
                 <button class="button apply-button" type="submit">Применить</button>
@@ -191,38 +195,16 @@
         <ul class="sorting-hotels">
           <li class="sorting-item">
             <a href="#" class="sorting-item-link">
-              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
-                <path d="M4 0H0V6H4V0Z" fill="black" />
-                <path d="M16 0H12V6H16V0Z" fill="black" />
-                <path d="M10 0H6V6H10V0Z" fill="black" />
-                <path d="M4 8H0V14H4V8Z" fill="black" />
-                <path d="M16 8H12V14H16V8Z" fill="black" />
-                <path d="M10 8H6V14H10V8Z" fill="black" />
-              </svg>
               <span class="visually-hidden">Показать карточки</span>
             </a>
           </li>
           <li class="sorting-item">
             <a href="#" class="sorting-item-link">
-              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
-                <path d="M16 12H0V14H16V12Z" fill="black" />
-                <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black" />
-              </svg>
               <span class="visually-hidden">Показать слайды</span>
             </a>
           </li>
           <li class="sorting-item">
             <a href="#" class="sorting-item-link">
-              <svg width="16" height="14" viewBox="0 0 16 14" fill="none">
-                <path d="M2 0H0V2H2V0Z" fill="black" />
-                <path d="M16 0H4V2H16V0Z" fill="black" />
-                <path d="M2 4H0V6H2V4Z" fill="black" />
-                <path d="M16 4H4V6H16V4Z" fill="black" />
-                <path d="M2 8H0V10H2V8Z" fill="black" />
-                <path d="M16 8H4V10H16V8Z" fill="black" />
-                <path d="M2 12H0V14H2V12Z" fill="black" />
-                <path d="M16 12H4V14H16V12Z" fill="black" />
-              </svg>
               <span class="visually-hidden">Показать список</span>
             </a>
           </li>
