@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body>
@@ -315,6 +316,63 @@
         </svg>
       </a>
     </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-booking-form">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
+            <p class="field-group check-in-date">
+              <label class="check-in-label" for="check-in">Дата заезда:</label>
+              <input class="booking-form-field field" type="text" id="check-in" name="check-in"
+                placeholder="27 апреля 2020">
+              <span class="check-in-info">Мы не можем отправить вас в прошлое.</span>
+            </p>
+            <p class="field-group check-out-date">
+              <label class="check-out-label" for="check-out">Дата выезда:</label>
+              <input class="booking-form-field field" type="text" id="check-out" name="check-out"
+                placeholder="1 сентября 2021">
+              <span class="check-out-info">На эти даты есть свободные номера. Пока есть.</span>
+            </p>
+            <div class="booking-amount">
+              <div class="field-group modal-booking">
+                <label class="booking-adult-label" for="booking-adult">Взрослые:</label>
+                <input class="booking-adult-form field" type="number" min="1" max="10" id="booking-adult"
+                  name="booking-adult" placeholder="2">
+                <button class="modal-btn minus-button" type="button">
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <button class="modal-btn plus-button" type="button">
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </div>
+              <div class="field-group modal-booking">
+                <label class="booking-kids-label label-icon" for="booking-kids">Дети:</label>
+                <div class="tooltip-container">
+                  <button class="info" type="button">
+                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                    <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых
+                      от 6 до 18 лет. Дети<br> до 6 лет размещаются<br> бесплатно.
+                    </span>
+                  </button>
+                </div>
+                <input class="booking-kids-form field" type="number" min="1" max="10" id="booking-kids"
+                  name="booking-kids" placeholder="1">
+                <button class="modal-btn minus-button" type="button">
+                  <span class="visually-hidden">Минус</span>
+                </button>
+                <button class="modal-btn plus-button" type="button">
+                  <span class="visually-hidden">Плюс</span>
+                </button>
+              </div>
+            </div>
+            <button class="button modal-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
 </body>
 
