@@ -833,30 +833,6 @@ ol {
   border-radius: 4px;
 }
 
-input[type="text"] .error {
-  position: relative;
-}
-
-.error::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "Мы не можем отправить вас в прошлое.";
-  color: #FF5757;
-}
-
-input[type="text"] .success {
-  position: relative;
-}
-
-.success::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "На эти даты есть свободные номера. Пока есть.";
-  color: #333333;
-}
-
 .error-message,
 .success-message {
   padding: 0;
@@ -877,7 +853,7 @@ input[type="text"] .success {
   color: #FF5757;
 }
 
-.success-message{
+.success-message {
   grid-column: 2/3;
   margin-left: 0;
   align-self: end;
@@ -1005,7 +981,6 @@ input[type="number"] {
 
 .info {
   position: absolute;
-  display: none;
   top: 10px;
   left: -18px;
   width: 25px;
@@ -1030,6 +1005,7 @@ input[type="number"] {
 
 .tooltip-text {
   position: absolute;
+  display: none;
   top: 44px;
   left: -114px;
   width: 216px;
@@ -1837,12 +1813,6 @@ input[type="radio"]:disabled {
 
 /* Popover */
 
-ul,
-li {
-  margin: 0;
-  padding: 0;
-}
-
 .popover {
   position: absolute;
   display: none;
@@ -1878,6 +1848,11 @@ li {
   margin: 0;
 }
 
+.card-hotel-list {
+  margin: 0;
+  padding: 0;
+}
+
 .card-hotel-image {
   width: 48px;
   height: 48px;
@@ -1895,7 +1870,6 @@ li {
   display: grid;
   grid-template-columns: 65px 1fr;
   grid-template-rows: 24px 24px;
-  padding: 5px;
   text-decoration: none;
   box-sizing: border-box;
 }
