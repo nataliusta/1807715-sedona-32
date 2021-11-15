@@ -62,6 +62,38 @@
                 12
               </span>
             </a>
+            <div class="popover popover-card">
+              <div class="popover-content">
+                <h2 class="visually-hidden">Избранное</h2>
+                <ul class="card-hotel-list">
+                  <li class="card-hotel">
+                    <a class="card-hotel-image-link" href="#">
+                      <img class="card-hotel-image" src="img/catalog/desert-hotel.jpg" width="180" height="120"
+                        alt="Desert Quail Inn">
+                      <p class="card-hotel-title">Desert Quail Inn</p>
+                    <p class="card-hotel-type">Мотель</p>
+                  </a>
+                    <button class="card-hotel-button button" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                  <li class="card-hotel">
+                    <a class="card-hotel-image-link" href="#">
+                      <img class="card-hotel-image" src="img/catalog/villas-hotel.jpg" width="180" height="120"
+                        alt="Villas at Poco Diablo">
+                      <p class="card-hotel-title">Villas at Poco Diablo</p>
+                    <p class="card-hotel-type">Апартаменты</p>
+                  </a>
+                    <button class="card-hotel-button button" type="button">
+                      <span class="visually-hidden">Удалить из корзины</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <a class="button popover-button" href="#">
+                Все избранные
+              </a>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-button button" href="#">
@@ -326,20 +358,20 @@
           <form class="booking-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group check-in-date">
               <label class="check-in-label" for="check-in">Дата заезда:</label>
-              <input class="booking-form-field field" type="text" id="check-in" name="check-in"
-                placeholder="27 апреля 2020">
-              <span class="check-in-info">Мы не можем отправить вас в прошлое.</span>
+              <input class="booking-form-field modal-field error" type="text" id="check-in" name="check-in"
+                placeholder="Укажите дату">
+              <span class="error-message">Мы не можем отправить вас в прошлое.</span>
             </p>
             <p class="field-group check-out-date">
               <label class="check-out-label" for="check-out">Дата выезда:</label>
-              <input class="booking-form-field field" type="text" id="check-out" name="check-out"
-                placeholder="1 сентября 2021">
-              <span class="check-out-info">На эти даты есть свободные номера. Пока есть.</span>
+              <input class="booking-form-field modal-field success" type="text" id="check-out" name="check-out"
+                placeholder="Укажите дату">
+              <span class="success-message">На эти даты есть свободные номера. Пока есть.</span>
             </p>
             <div class="booking-amount">
               <div class="field-group modal-booking">
                 <label class="booking-adult-label" for="booking-adult">Взрослые:</label>
-                <input class="booking-adult-form field" type="number" min="1" max="10" id="booking-adult"
+                <input class="booking-adult-form modal-field" type="number" min="1" max="10" id="booking-adult"
                   name="booking-adult" placeholder="2">
                 <button class="modal-btn minus-button" type="button">
                   <span class="visually-hidden">Минус</span>
@@ -358,7 +390,7 @@
                     </span>
                   </button>
                 </div>
-                <input class="booking-kids-form field" type="number" min="1" max="10" id="booking-kids"
+                <input class="booking-kids-form modal-field" type="number" min="1" max="10" id="booking-kids"
                   name="booking-kids" placeholder="1">
                 <button class="modal-btn minus-button" type="button">
                   <span class="visually-hidden">Минус</span>

@@ -173,6 +173,7 @@ ol {
 }
 
 .navigation-link-icon {
+  position: relative;
   display: block;
   min-width: 18px;
   min-height: 18px;
@@ -536,7 +537,7 @@ ol {
   margin: 0;
 }
 
-.newsletter-form .field  {
+ .field {
   width: 100%;
   padding-top: 17px;
   padding-left: 22px;
@@ -576,6 +577,10 @@ ol {
 .field:invalid .placeholder-shown {
   background-color: #FFFFFF;
   outline: 2px solid #FF5757;
+}
+
+.field:disabled {
+  opacity: 0.3;
 }
 
 .newsletter-button {
@@ -672,18 +677,18 @@ ol {
   text-decoration: none;
 }
 
-.phone:hover {
+.phone:hover,
+.phone:focus,
+.phone:active  {
   color: #756257;
 }
 
 .phone:focus {
-  color: #756257;
   outline: 3px solid #83B3D3;
   border-radius: 6px;
 }
 
 .phone:active {
-  color: #756257;
   opacity: 0.3;
 }
 
@@ -758,6 +763,10 @@ ol {
   opacity: 0.3;
 }
 
+.modal-close-button:disabled {
+  opacity: 0.3;
+}
+
 .modal-title {
   min-width: 500px;
   padding: 0;
@@ -777,9 +786,8 @@ ol {
 }
 
 .modal-button {
-  font-size: 20px;
-  line-height: 40px;
   width: 100%;
+  font-size: 20px;
   padding: 20px 0;
   border-radius: 10px;
 }
@@ -797,6 +805,11 @@ ol {
   opacity: 0.3;
 }
 
+.modal-button:disabled {
+  opacity: 0.3;
+}
+
+.modal-close-button
 .booking-form {
   display: flex;
   flex-direction: column;
@@ -806,7 +819,6 @@ ol {
   display: grid;
   grid-template-columns: 155px 1fr;
   grid-template-rows: 50px 29px;
-
 }
 
 .check-out-date {
@@ -821,10 +833,35 @@ ol {
   border-radius: 4px;
 }
 
-.check-in-info,
-.check-out-info {
+input[type="text"] .error {
+  position: relative;
+}
+
+.error::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "Мы не можем отправить вас в прошлое.";
+  color: #FF5757;
+}
+
+input[type="text"] .success {
+  position: relative;
+}
+
+.success::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "На эти даты есть свободные номера. Пока есть.";
+  color: #333333;
+}
+
+.error-message,
+.success-message {
   padding: 0;
   margin: 0;
+  margin-bottom: -5px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 40px;
@@ -832,7 +869,7 @@ ol {
   box-sizing: border-box;
 }
 
-.check-in-info {
+.error-message {
   grid-column: 2/3;
   align-self: end;
   padding: 0;
@@ -840,7 +877,7 @@ ol {
   color: #FF5757;
 }
 
-.check-out-info {
+.success-message{
   grid-column: 2/3;
   margin-left: 0;
   align-self: end;
@@ -861,12 +898,39 @@ ol {
   font-weight: 700;
 }
 
-.field {
+.modal-field {
+  padding-top: 17px;
+  padding-left: 22px;
+  padding-right: 20px;
+  padding-bottom: 17px;
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 40px;
   font-weight: 700;
   color: #000000;
+  background-color: #F2F2F2;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal-field:hover,
+.modal-field:focus {
+  background-color: #E5E5E5;
+}
+
+.modal-field:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-field:disabled {
+  opacity: 0.3;
+}
+
+.modal-field::placeholder {
+  color: #000000;
+  opacity: 0.6;
 }
 
 .booking-adult-form,
@@ -881,6 +945,10 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="number"] {
+  appearance: textfield;
 }
 
 .modal-booking {
@@ -911,6 +979,10 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0.3;
 }
 
+.modal-btn:disabled {
+  opacity: 0.3;
+}
+
 .minus-button {
   position: absolute;
   right: 92px;
@@ -933,12 +1005,16 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .info {
   position: absolute;
+  display: none;
   top: 10px;
   left: -18px;
   width: 25px;
   height: 25px;
   padding: 0;
   margin-right: 18px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
   background-color: #83B3D3;
   border: none;
   border-radius: 50%;
@@ -959,9 +1035,6 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 216px;
   padding: 15px 18px 25px 22px;
   margin: 0 auto;
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
   color: #FFFFFF;
   background-color: #333333;
   border-radius: 10px;
@@ -1099,6 +1172,10 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type="number"] {
+  appearance: textfield;
+}
+
 .range-scale {
   width: 287px;
   height: 4px;
@@ -1180,13 +1257,16 @@ input[type="number"]::-webkit-inner-spin-button {
   background-color: transparent;
 }
 
-
 .catalog-filters-label:first-child {
   border-right: 2px solid #FFFFFF;
 }
 
 .catalog-filter-input::placeholder {
   color: #FFFFFF;
+}
+
+.catalog-filter-input:disabled {
+  opacity: 0.3;
 }
 
 /* Control */
@@ -1234,6 +1314,11 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: -2px;
   margin-left: 4px;
   content: url("../img/icons/checkbox1.svg");
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+  opacity: 0.3;
 }
 
 /* Radio */
@@ -1284,6 +1369,10 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0.3;
 }
 
+.apply-button:disabled {
+  opacity: 0.3;
+}
+
 .reset-button {
   display: block;
   padding: 0;
@@ -1303,6 +1392,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .reset-button:active {
+  opacity: 0.3;
+}
+
+.reset-button:disabled {
   opacity: 0.3;
 }
 
@@ -1528,6 +1621,10 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0.3;
 }
 
+.hotels-card-button:disabled {
+  opacity: 0.3;
+}
+
 .hotels-card-button.button-brown {
   grid-column: 2/3;
   grid-row: 3/4;
@@ -1549,6 +1646,10 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0.3;
 }
 
+.button-brown:disabled {
+  opacity: 0.3;
+}
+
 .hotels-card-button.button-green {
   grid-column: 3/4;
   grid-row: 3/4;
@@ -1567,6 +1668,10 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .button-green:active {
+  opacity: 0.3;
+}
+
+.button-green:disabled {
   opacity: 0.3;
 }
 
@@ -1728,4 +1833,166 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 137px;
   text-align: center;
   color: #000000;
+}
+
+/* Popover */
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.popover {
+  position: absolute;
+  display: none;
+  top: 48px;
+  left: -183px;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 400px;
+  min-height: 207px;
+  font-family: "PT Sans", sans-serif;
+  line-height: 40px;
+  color: #333333;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-bottom: none;
+  border-radius: 20px;
+  box-shadow: 0px 25px 50px 0px #00000026;
+}
+
+.popover::before {
+  position: absolute;
+  content:"";
+  top: -9px;
+  left: 190px;
+  width: 20px;
+  height: 9px;
+  background-image: url("../img/icons/popap.svg");
+}
+
+.popover-content {
+  height: 100%;
+  padding: 25px 25px 0;
+  margin: 0;
+}
+
+.card-hotel-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-hotel {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.card-hotel-image-link {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  grid-template-rows: 24px 24px;
+  padding: 5px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.card-hotel-image-link:hover {
+  opacity: 0.6;
+}
+
+.card-hotel-image-link:focus {
+  width: fit-content;
+  outline: 3px solid #83B3D3;
+  border-radius: 10px;
+}
+
+.card-hotel-image-link:active {
+  opacity: 0.3;
+}
+
+.card-hotel-title {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.card-hotel-link {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 20px;
+  align-self: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.card-hotel-type {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.popover-button {
+  display: block;
+  width: 400px;
+  padding: 20px;
+  margin: 0 -1px;
+  background: #756257;
+  border-radius: 0px 0px 20px 20px;
+  text-align: center;
+}
+
+.popover-button:hover,
+.popover-button:focus {
+  background-color: #615048;
+}
+
+.popover-button:focus {
+  outline: 3px solid #83B3D3;
+  outline-offset: -3px;
+}
+
+.popover-button:active {
+  opacity: 0.3;
+}
+
+.popover-button:disabled {
+  opacity: 0.3;
+}
+
+.card-hotel-button {
+  width: 16px;
+  height: 16px;
+  padding: 10px;
+  margin: 0;
+  align-self: start;
+  background: url("../img/icons/delete1.svg") no-repeat;
+  opacity: 0.2;
+}
+
+.card-hotel-button:hover,
+.card-hotel-button:focus {
+  opacity: unset;
+}
+
+.card-hotel-button:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 3px;
+}
+
+.card-hotel-button:active {
+  opacity: 0.1;
+}
+
+.card-hotel-button:disabled {
+  opacity: 0.3;
 }
