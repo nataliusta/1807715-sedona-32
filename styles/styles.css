@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  min-width: 1280px;
+  min-width: 1200px;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -123,7 +123,6 @@ ol {
   padding: 0;
   padding-top: 12px;
   padding-bottom: 11px;
-  font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -415,7 +414,7 @@ ol {
   position: relative;
   width: 400px;
   margin: 0 auto;
-  padding-top: 88px;
+  padding-top: 188px;
   padding-left: 75px;
   padding-right: 75px;
   padding-bottom: 82px;
@@ -439,22 +438,28 @@ ol {
   text-transform: uppercase;
 }
 
-.tips-item:nth-child(1)::before {
+.tips-item::before {
   position: absolute;
-  top: 89px;
-  background: url("../img/icons/house.svg") no-repeat;
+  top: 80px;
+  left: 50%;
+  content: "";
+  width: 80px;
+  height: 76px;
+  margin-left: -40px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tips-item:nth-child(1)::before {
+  background-image: url("../img/icons/house.svg");
 }
 
 .tips-item:nth-child(2)::before {
-  position: absolute;
-  top: 91px;
-  background: url("../img/icons/burger.svg") no-repeat;
+  background-image: url("../img/icons/burger.svg");
 }
 
 .tips-item:nth-child(3)::before {
-  position: absolute;
-  top: 85px;
-  background: url("../img/icons/gift.svg") no-repeat;
+  background-image: url("../img/icons/gift.svg");
 }
 
 .tips-text {
@@ -570,11 +575,11 @@ ol {
 
  .field {
   width: 100%;
+  margin: 0;
   padding-top: 17px;
   padding-left: 22px;
   padding-right: 20px;
   padding-bottom: 17px;
-  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
