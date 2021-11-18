@@ -21,8 +21,6 @@ html {
 body {
   min-width: 1200px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
   background-color: #F2F2F2;
 }
 
@@ -274,17 +272,15 @@ ol {
   margin: 0 auto;
 }
 
-.welcome {
-  background-image: url("../img/index-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-
 .welcome-container {
   position: relative;
   margin-bottom: 61px;
   padding-top: 51px;
   padding-bottom: 82px;
+  background: #333333;
+  background-image: url("../img/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .welcome-container::after {
@@ -540,6 +536,7 @@ ol {
   margin-top: -2px;
   text-align: center;
   color: #FFFFFF;
+  background: #333333;
   background-image: url("../img/newsletter-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -644,11 +641,13 @@ ol {
 /* Page-footer */
 
 .page-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 180px 700px 1fr;
+  row-gap: 110px;
   width: 1200px;
   min-height: 120px;
   margin: 0 auto;
-  padding-top: 48px;
+  padding-top: 50px;
   padding-left: 72px;
   padding-right: 72px;
   padding-bottom: 30px;
@@ -659,22 +658,23 @@ ol {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  min-width: 107px;
+  max-width: 180px;
   margin: 0;
   padding: 0;
 }
 
 .footer-social-item {
   margin: 0;
-  margin-left: -10px;
-  margin-right: 19px;
+  margin-right: 9px;
+  margin-left: -2px;
+  margin-bottom: 15px;
   padding: 0;
 }
 
 .footer-social-link {
   width: 18px;
   height: 18px;
-  padding: 10px;
+  padding: 6px 9px 3px;
   box-sizing: border-box;
 }
 
@@ -686,6 +686,7 @@ ol {
   fill: #68A2CA;
   outline: 3px solid #83B3D3;
   border-radius: 6px;
+  outline-offset: -1px;
 }
 
 .social-icon:active .social {
@@ -703,12 +704,10 @@ ol {
 }
 
 .phone {
-  flex-grow: 1;
-  width: 720px;
+  height: 50px;
   margin: 0 auto;
-  margin-top: -11px;
-  margin-right: 20px;
-  padding: 5px 50px;
+  margin-top: -15px;
+  padding: 5px 55px;
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
@@ -724,9 +723,9 @@ ol {
 }
 
 .phone:focus {
+  width: fit-content;
   outline: 3px solid #83B3D3;
-  border-radius: 6px;
-  outline-offset: -3px;
+  border-radius: 10px;
 }
 
 .phone:active {
@@ -734,7 +733,9 @@ ol {
 }
 
 .htmlacademy-link {
-  margin-top: -6px;
+  justify-self: end;
+  padding: 12px 11px;
+  margin-top: -20px;
 }
 
 .htmlacademy-link:hover .htmlacademy {
@@ -756,6 +757,7 @@ ol {
 
 .modal-container {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   display: flex;
@@ -1084,15 +1086,16 @@ input[type="number"] {
 }
 
 .main-container-photo {
-  min-height: 287px;
+  min-height: 408px;
   margin: 0 auto;
-  padding-top: 33px;
+  padding-top: 34px;
   padding-left: 72px;
   padding-right: 72px;
-  padding-bottom: 86px;
-  margin-bottom: 44px;
+  padding-bottom: 68px;
+  margin-bottom: 47px;
+  background:  #333333;
   background-image: url("../img/catalog-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   box-sizing: border-box;
 }
@@ -1165,14 +1168,14 @@ input[type="number"] {
   display: grid;
   grid-template-columns: 150px 145px 1fr 160px;
   column-gap: 67px;
-  height: 151px;
+  min-height: 151px;
   margin: 0;
   color: #FFFFFF;
 }
 
 .catalog-filters-group {
-  min-width: 200px;
-  max-height: 150px;
+  min-width: 170px;
+  min-height: 150px;
   padding: 0;
   padding-right: 13px;
   margin: 0 auto;
