@@ -49,10 +49,6 @@ body {
   overflow: hidden;
 }
 
-a {
-  color: #000000;
-}
-
 .button {
   display: inline-block;
   box-sizing: border-box;
@@ -78,10 +74,6 @@ a {
   background-color: #7DB54F;
 }
 
-ul,
-ol {
-  list-style-type: none;
-}
 
 /* Header */
 
@@ -113,6 +105,7 @@ ol {
   width: 431px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navigation-item {
@@ -315,11 +308,17 @@ ol {
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  list-style-type: none;
 }
 
 .advantages-item-container {
   display: grid;
   grid-template-columns: 400px 400px 400px;
+}
+
+.advantages-item-container .sedona-content {
+  padding-left: 95px;
+  padding-right: 95px;
 }
 
 .advantages-content:nth-child(even) {
@@ -345,10 +344,10 @@ ol {
   flex-direction: column;
   width: 400px;
   min-height: 382px;
-  padding-top: 98px;
-  padding-left: 75px;
-  padding-right: 75px;
-  padding-bottom: 88px;
+  padding-top: 100px;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-bottom: 84px;
   box-sizing: border-box;
 }
 
@@ -389,6 +388,7 @@ ol {
 .advantages-text {
   margin: 0;
   margin-bottom: -7px;
+  text-align: center;
 }
 
 /* Tips*/
@@ -404,6 +404,7 @@ ol {
   text-align: center;
   color: #000000;
   background-color: #FFFFFF;
+  list-style-type: none;
 }
 
 .tips-item {
@@ -411,8 +412,8 @@ ol {
   width: 400px;
   margin: 0 auto;
   padding-top: 188px;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 80px;
+  padding-right: 80px;
   padding-bottom: 82px;
   text-align: center;
   box-sizing: border-box;
@@ -436,7 +437,7 @@ ol {
 
 .tips-item::before {
   position: absolute;
-  top: 80px;
+  top: 88px;
   left: 50%;
   content: "";
   width: 80px;
@@ -467,8 +468,8 @@ ol {
 
 .search {
   margin: 0;
-  padding-top: 92px;
-  padding-bottom: 93px;
+  padding-top: 94px;
+  padding-bottom: 91px;
   text-align: center;
 }
 
@@ -533,7 +534,6 @@ ol {
   margin: 0;
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-top: -2px;
   text-align: center;
   color: #FFFFFF;
   background: #333333;
@@ -661,6 +661,7 @@ ol {
   max-width: 180px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .footer-social-item {
@@ -1118,6 +1119,7 @@ input[type="number"] {
   padding: 0;
   margin-bottom: 46px;
   color: #FFFFFF;
+  list-style-type: none;
 }
 
 .breadcrumbs-item {
@@ -1189,6 +1191,7 @@ input[type="number"] {
 .catalog-filters-list {
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
 .catalog-filters-title {
@@ -1490,6 +1493,7 @@ input[type="radio"]:disabled {
   min-width: 160px;
   padding: 0;
   margin: 0;
+  list-style-type: none;
 }
 
 .sorting-item {
@@ -1804,6 +1808,7 @@ input[type="radio"]:disabled {
   margin: 0;
   margin-right: 301px;
   padding: 0;
+  list-style-type: none;
 }
 
 .pagination-item:not(:last-child) {
