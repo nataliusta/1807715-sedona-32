@@ -1770,6 +1770,29 @@ input[type="radio"]:disabled {
   background-repeat: space;
 }
 
+/*
+.one-stars-hotel {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  align-self: center;
+  width: 21px;
+  height: 17px;
+  margin: 0 auto;
+  background-image: url("../img/icons/star.svg");
+  background-repeat: space;
+}
+
+.five-stars-hotel {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  align-self: center;
+  width: 100px;
+  height: 17px;
+  margin: 0 auto;
+  background-image: url("../img/icons/star.svg");
+  background-repeat: space;
+}*/
+
 .rating {
   grid-column: 4/5;
   grid-row: 3/4;
